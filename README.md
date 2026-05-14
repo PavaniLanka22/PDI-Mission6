@@ -1,16 +1,18 @@
-# React + Vite
+**Project Overview:**
+Built a fully functional React + Vite E-Commerce Single Page Application (SPA)
+Implemented client-side routing using React Router DOM
+Integrated dynamic product data from the DummyJSON REST API
+Designed responsive multi-page navigation without browser reloads
+Implemented global state management using React Context API
+Added protected routes with mock authentication
+Persisted cart and authentication state using localStorage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Product features:** Fetches products from DummyJSON API, Dynamic product rendering, Product detail navigation using route parameters, Responsive product grid layout, Loading state handling, Error-safe API integration
 
-Currently, two official plugins are available:
+**Cart features:** Global cart management using Context API, Add to cart functionality, Remove from cart functionality, Dynamic cart badge updates, Aggregate total price calculation, Cart persistence after browser refresh
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Authentication features:** Mock guest login system, Global authentication state, Protected checkout route, Automatic redirect to login for unauthorized access, Redirect back after successful login, Authentication persistence using localStorage
 
-## React Compiler
+**Technical Stack:** React, Vite, React Router DOM, Context API, useReducer, localStorage, CSS3
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img width="1919" height="968" alt="Screenshot 2026-05-14 215158" src="https://github.com/user-attachments/assets/66ae0ef2-7149-486d-9f95-d9c9a9800c53" />
