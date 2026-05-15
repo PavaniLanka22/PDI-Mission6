@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-/* =========================================
-   RESET
-========================================= */
 
 * {
   margin: 0;
@@ -33,9 +30,7 @@ img {
   display: block;
 }
 
-/* =========================================
-   GLOBAL
-========================================= */
+/*GLOBAL*/
 
 .container {
   width: 100%;
@@ -51,9 +46,7 @@ img {
   line-height: 1.2;
 }
 
-/* =========================================
-   NAVBAR
-========================================= */
+/*NAVBAR */
 
 .navbar {
   position: sticky;
@@ -144,22 +137,14 @@ img {
   font-weight: 600;
 }
 
-/* =========================================
-   HERO
-========================================= */
+/* HERO*/
 
 .hero-wrapper {
   width: 100%;
 }
-
-/* FIXED FULL HEIGHT SECTION */
 .hero {
   width: 100%;
-
-  /* THIS IS THE IMPORTANT FIX */
   min-height: calc(100vh - 72px);
-
-  /* MOBILE SAFE HEIGHT */
   min-height: calc(100svh - 72px);
 
   background: linear-gradient(
@@ -228,9 +213,7 @@ img {
   box-shadow: 0 15px 35px rgba(37, 99, 235, 0.45);
 }
 
-/* =========================================
-   PRODUCTS
-========================================= */
+/*PRODUCTS */
 
 .products-grid {
   display: grid;
@@ -281,9 +264,7 @@ img {
   font-weight: 700;
 }
 
-/* =========================================
-   PRODUCT DETAILS
-========================================= */
+/*PRODUCT DETAILS */
 
 .product-details {
   display: grid;
@@ -325,9 +306,7 @@ img {
   margin: 26px 0;
 }
 
-/* =========================================
-   BUTTONS
-========================================= */
+/*BUTTONS*/
 
 .btn {
   border: none;
@@ -356,9 +335,7 @@ img {
   transform: translateY(-3px);
 }
 
-/* =========================================
-   CART
-========================================= */
+/*CART */
 
 .cart-container {
   display: flex;
@@ -442,9 +419,7 @@ img {
   font-size: clamp(2rem, 5vw, 38px);
 }
 
-/* =========================================
-   CONTACT
-========================================= */
+/*CONTACT */
 
 .contact-page {
   padding-top: 50px;
@@ -528,9 +503,7 @@ img {
   cursor: pointer;
 }
 
-/* =========================================
-   LOGIN
-========================================= */
+/* LOGIN */
 
 .login-page {
   min-height: calc(100vh - 72px);
@@ -578,9 +551,7 @@ img {
   cursor: pointer;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* RESPONSIVE */
 
 @media (max-width: 1024px) {
   .navbar {
@@ -602,7 +573,6 @@ img {
   }
 
   .hero {
-    /* FULL MOBILE HEIGHT */
     min-height: 100svh;
 
     padding: 40px 18px;
@@ -663,7 +633,6 @@ img {
   }
 
   .hero {
-    /* THIS ENSURES COMPLETE SCREEN OCCUPATION */
     min-height: 100svh;
 
     padding: 30px 14px;
