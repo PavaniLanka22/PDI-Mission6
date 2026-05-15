@@ -1,4 +1,8 @@
-import { useContext, useEffect, useState } from "react";
+import {
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 import { useParams } from "react-router-dom";
 
@@ -7,18 +11,56 @@ import { CartContext } from "../context/CartContext";
 const ProductDetails = () => {
   const { id } = useParams();
 
-  const { addToCart } = useContext(CartContext);
+  const { addToCart } =
+    useContext(CartContext);
 
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] =
+    useState(null);
+
+  const [loading, setLoading] =
+    useState(true);
+
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(`https://dummyjson.com/products/${id}`)
-      .then((res) => res.json())
-      .then((data) => setProduct(data));
+    fetch(
+      `https://dummyjson.com/products/${id}`
+    )
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(
+            "Failed to fetch product"
+          );
+        }
+
+        return res.json();
+      })
+      .then((data) => {
+        setProduct(data);
+
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+
+        setLoading(false);
+      });
   }, [id]);
 
-  if (!product) {
-    return <h2>Loading...</h2>;
+  if (loading) {
+    return (
+      <h2 className="loading-text">
+        Loading product...
+      </h2>
+    );
+  }
+
+  if (error) {
+    return (
+      <h2 className="loading-text">
+        {error}
+      </h2>
+    );
   }
 
   return (
@@ -40,7 +82,9 @@ const ProductDetails = () => {
 
           <button
             className="btn add-btn"
-            onClick={() => addToCart(product)}
+            onClick={() =>
+              addToCart(product)
+            }
           >
             🛒 Add To Cart
           </button>
